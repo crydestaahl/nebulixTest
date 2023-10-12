@@ -18,8 +18,17 @@ const config = {
   logo_url: "https://nebulix.unfolding.io/logo.svg",
   local_backend: true,
   backend: {
-    name: "test-repo",
+    name: 'git-gateway',
+    branch: 'main',
+    commit_messages: {
+      create: 'Create {{collection}} “{{slug}}”',
+      update: 'Update {{collection}} “{{slug}}”',
+      delete: 'Delete {{collection}} “{{slug}}”',
+      uploadMedia: '[skip ci] Upload “{{path}}”',
+      deleteMedia: '[skip ci] Delete “{{path}}”',
+    }
   },
+  
   search: "true",
   media_folder: "src/assets",
   public_folder: "/src/assets",
