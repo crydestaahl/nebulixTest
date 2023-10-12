@@ -19,7 +19,12 @@ const config = {
   local_backend: true,
   backend: {
     name: 'git-gateway',
+    repo: 'crydestaahl/nebulixTest',
     branch: 'main',
+    api_root: 'https://api.github.com',
+    site_domain: 'grand-blancmange-eab026.netlify.app',
+    base_url: 'https://api.netlify.com',
+    auth_endpoint: 'auth',
     commit_messages: {
       create: 'Create {{collection}} “{{slug}}”',
       update: 'Update {{collection}} “{{slug}}”',
@@ -28,7 +33,7 @@ const config = {
       deleteMedia: '[skip ci] Delete “{{path}}”',
     }
   },
-  
+
   search: "true",
   media_folder: "src/assets",
   public_folder: "/src/assets",
